@@ -1,10 +1,5 @@
 import os
-
-
-
 from core.spectral_normalization import SpectralNorm
-
-
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 import copy
 import math
@@ -69,9 +64,6 @@ class Transition(nn.Module):
         if self.upsample:
             out = F.interpolate(x, scale_factor=2, mode='nearest')
         return out
-
-
-
 
 # special ResBlock just for the layer of the discriminator
 class ResBlockDiscriminator(nn.Module):
@@ -225,7 +217,6 @@ class Generator(nn.Module):
         self.encode = nn.ModuleList()
         self.decode = nn.ModuleList()
         self.to_rgb = nn.Sequential(
-            # SwitchNormalization(dim_in),
             nn.InstanceNorm2d(dim_in, affine=True),
             nn.LeakyReLU(0.2),
             nn.Conv2d(dim_in, 3, 1, 1, 0))
