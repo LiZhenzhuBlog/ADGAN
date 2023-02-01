@@ -1,7 +1,7 @@
 # Environment and Supported Toolkits
 
  python 3.9<br>
- pytorch(Pytorch http://pytorch.org/)
+ pytorch(http://pytorch.org/)<br>
  tensorflow 2.10.0<br>
  munch 2.5.0<br>
  opencv-python 4.4.0.46<br>
