@@ -26,8 +26,8 @@
  python main.py --mode sample --num_domains 4 --resume_iter 100000 --w_hpf 0 \
                --checkpoint_dir expr/checkpoints/BraTS2018 \
                --result_dir expr/results/BraTS2018 \
-               --src_dir assets/representative/BraTS2018/src \
-               --ref_dir assets/representative/BraTS2018/ref
+               --src_dir assets/BraTS2018/src \
+               --ref_dir assets/BraTS2018/ref
 ```
 # Notes
 1. The implementation of proposed ADGAN model is based on StarGAN V2 (https://github.com/clovaai/stargan-v2). 
