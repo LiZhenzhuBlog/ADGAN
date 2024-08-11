@@ -33,3 +33,4 @@
 1. The implementation of proposed ADGAN model is based on StarGAN V2 (https://github.com/clovaai/stargan-v2). 
 2. To facilitate processing, some image data were uploaded, which were derived from the dataset BraTS2018.
 3. For smooth training of the network, it is recommended that the image naming does not contain any modal nouns.
+4. Modify the weight file name you want to test in the solver file
