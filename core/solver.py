@@ -166,9 +166,11 @@ class Solver(nn.Module):
         utils.translate_using_reference(nets_ema, args, src.x, ref.x, ref.y, fname)
         utils.translate_using_onereference(nets_ema, args, src.x, ref.x, ref.y, fname)
 
-        fname = ospj(args.result_dir, 'video_ref.mp4')
-        print('Working on {}...'.format(fname))
-        utils.video_ref(nets_ema, args, src.x, ref.x, ref.y, fname)
+        print(f'as:{fname}')
+
+        #fname = ospj(args.result_dir, 'video_ref.mp4')
+        #print('Working on {}...'.format(fname))
+        #utils.video_ref(nets_ema, args, src.x, ref.x, ref.y, fname)
 
 
 def compute_d_loss(nets, args, x_real, y_org, y_trg, z_trg=None, x_ref=None, masks=None):
