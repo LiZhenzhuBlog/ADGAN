@@ -214,6 +214,7 @@ def video_ref(nets, args, x_src, x_ref, y_ref, fname):
     video = []
     s_ref = nets.style_encoder(x_ref, y_ref)
     s_prev = None
+    frames=[]
     for data_next in tqdm(zip(x_ref, y_ref, s_ref), 'video_ref', len(x_ref)):
         x_next, y_next, s_next = [d.unsqueeze(0) for d in data_next]
         if s_prev is None:
